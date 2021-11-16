@@ -1,0 +1,57 @@
+@import "../../styles/_colors.scss";
+
+.chip {
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 24px 5px 8px;
+  border-radius: 6px;
+  transition: background-color .2s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &.invalid {
+    background-color: $backgroundInvalid;
+    margin-right: 8px;
+  }
+
+  .exclamation {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    font-size: 8px;
+    color: #fff;
+    background-color: $foregroundInvalid;
+    border-radius: 50%;
+    opacity: 1;
+    text-align: center;
+    right: 5px;
+    top: 7px;
+    padding-top: 1px;
+    overflow: hidden;
+  }
+
+  .remove {
+    position: absolute;
+    font-weight: normal;
+    font-size: 12px;
+    right: 8px;
+    top: 7px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+  &:hover {
+    background-color: $backgroundPrimary;
+    cursor: pointer;
+
+    .exclamation {
+      opacity: 0;
+    }
+
+    .remove {
+      opacity: 1;
+    }
+  }
+}

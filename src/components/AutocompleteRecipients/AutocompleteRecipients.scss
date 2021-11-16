@@ -1,0 +1,41 @@
+@import "../../styles/_colors.scss";
+@import "../../styles/_mixins.scss";
+
+.autocompleteContainer {
+  position: relative;
+
+
+  .fadeout {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 300px;
+    background: linear-gradient(180deg, rgba(0,0,0,0), white);
+    pointer-events: none;
+  }
+
+  .autocomplete {
+    background: $backgroundInputs;
+    box-shadow: 0 4px 14px rgba(26, 24, 24, 0.08);
+    border-radius: 4px;
+    width: 300px;
+    max-height: 250px;
+    overflow-y: auto;
+
+
+
+    @include styleScrollbar();
+
+    .item {
+      padding: 14px 21px;
+      font-size: 14px;
+      transition: background-color .2s ease-in-out;
+
+      &:hover {
+        background-color: $backgroundInputsHover;
+        cursor: pointer;
+      }
+    }
+  }
+}
+

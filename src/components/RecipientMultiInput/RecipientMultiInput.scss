@@ -1,0 +1,38 @@
+@import "../../styles/_colors.scss";
+@import "../../styles/_mixins.scss";
+
+.emailInput {
+  background: $backgroundInputs;
+  border-radius: 8px;
+  width: 400px;
+  display: flex;
+  padding: 4px 4px 0 4px;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 30px;
+  max-height: 200px;
+  overflow-y: auto;
+
+  @include styleScrollbar();
+
+  .chipItem {
+    margin-bottom: 4px;
+    min-width: 0;
+  }
+
+  .inputContainer {
+    flex-grow: 1;
+
+    input {
+      width: 100%;
+      border :0;
+      padding: 4px;
+      outline: none;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.autocompleteContainer {
+  margin-left: 32px;
+}
