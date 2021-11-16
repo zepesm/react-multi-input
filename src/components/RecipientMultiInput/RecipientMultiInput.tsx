@@ -70,10 +70,6 @@ const RecipientMultiInput: React.FC<Props> = (
             value={currentRecipient?.email}
             onChange={onInputChange}
             onKeyDown={onInputKeyDown}
-            /*          onBlur={(): void => {
-                        addRecipient(currentRecipient);
-                        setCurrentRecipient({ email: "" });
-                      }}*/
             placeholder="Enter recipients..."
           />
         </div>
