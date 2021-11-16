@@ -3,7 +3,11 @@
 
 .autocompleteContainer {
   position: relative;
+  visibility: hidden;
 
+  &.active {
+    visibility: visible;
+  }
 
   .fadeout {
     position: absolute;
@@ -21,9 +25,6 @@
     width: 300px;
     max-height: 250px;
     overflow-y: auto;
-
-
-
     @include styleScrollbar();
 
     .item {

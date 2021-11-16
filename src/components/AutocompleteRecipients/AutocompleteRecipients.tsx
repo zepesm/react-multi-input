@@ -23,7 +23,7 @@ const AutocompleteRecipients: React.FC<Props> = (
   }, [query])
 
   return (
-    <div className="autocompleteContainer">
+    <div  className={'autocompleteContainer' + (recipients.length ? ' active' : '')}>
       {recipients.length > 5 && <div className="fadeout" data-testid="fadeout" />}
       <div className="autocomplete">
         {recipients.map((recipient, index) =>

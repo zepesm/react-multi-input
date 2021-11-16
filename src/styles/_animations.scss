@@ -1,0 +1,14 @@
+@keyframes kFadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadein {
+  animation: kFadeIn .2s ease-in-out;
+}

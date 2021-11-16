@@ -58,7 +58,7 @@ const RecipientMultiInput: React.FC<Props> = (
     <>
       <div className="emailInput">
         {recipients.map((el, index) =>
-          <div className="chipItem" key={index}>
+          <div className="chipItem fadein" key={index}>
             <Chip
               isInvalid={el.id === undefined}
               onDelete={(): void => removeRecipientByIndex(index)}>{el.email}
